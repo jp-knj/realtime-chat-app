@@ -4,6 +4,7 @@ specifiers:
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@vitejs/plugin-react': ^1.3.0
+  axios: 0.27.2
   jquery: 3.6.0
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -22,6 +23,7 @@ devDependencies:
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.4
   '@vitejs/plugin-react': 1.3.2
+  axios: 0.27.2
   jquery: 3.6.0
   stream-chat: 6.5.1
   stream-chat-react: 9.0.0_e6e5d063ef5feaa5112ec4ba5f36ae64
@@ -485,6 +487,15 @@ packages:
     resolution: {integrity: sha512-Z0U3uhqQeg1oNcihswf4ZD57O3NrR1+ZXhxaROaWpDmsDTx7T2HNBV2ulBtie2hwJptu8UvgnJoK+BIqdzh/1w==}
     dependencies:
       follow-redirects: 1.15.0
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
+  /axios/0.27.2:
+    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+    dependencies:
+      follow-redirects: 1.15.0
+      form-data: 4.0.0
     transitivePeerDependencies:
       - debug
     dev: true

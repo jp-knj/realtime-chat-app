@@ -3,7 +3,9 @@ import { StreamChat} from "stream-chat";
 import { Chat } from 'stream-chat-react'
 import Cookie from "universal-cookie";
 
+// import 'stream-chat-react/dist/css/index.css';
 import './App.css';
+
 import { ChannelContainer, ChannelListContainer, Auth} from "./shared/main";
 const apiKey = '8395ppc483r3'
 const client:StreamChat<StreamChatGenerics>  = StreamChat.getInstance(apiKey);
@@ -19,12 +21,26 @@ if(authToken) {
     }, authToken)
 }
 const App = () => {
+    const [createType, setCreateType] = useState('');
+    const [isCreating, setIsCreating] = useState<boolean>(false);
+    const [isEditing, setIsEditing] = useState<boolean>(false);
     if(!authToken) return <Auth />
     return (
         <div className="app__wrapper">
             <Chat client={client} theme={"team light"}>
-                <ChannelContainer/>
-                <ChannelListContainer/>
+                <ChannelListContainer
+                    isCreating={isCreating}
+                    setIsCreating={setIsCreating}
+                    isEditing={isEditing}
+                    setIsEditing={setIsEditing}
+                    createType={createType}
+                />
+                <ChannelContainer
+                    isCreating={isCreating}
+                    setIsCreating={setIsCreating}
+                    isEditing={isEditing}
+                    setIsEditing={setIsEditing}
+                />
             </Chat>
         </div>
     );

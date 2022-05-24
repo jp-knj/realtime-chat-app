@@ -28,13 +28,6 @@ export const ChannelListContainer = () => {
             <SideBar />
             <div className="channel-list__list__wrapper">
                 <Header />
-                <ChannelList
-                    List={(listProps) => (
-                        <TeamChannelList
-                            {...listProps}
-                        />
-                    )}
-                />
             </div>
         </>
     );
